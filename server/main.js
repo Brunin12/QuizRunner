@@ -8,7 +8,7 @@ fastify.register(cors, {
   allowedHeaders: ["Content-Type", "Authorization"], 
 });
 
-const API_KEY = "yxcnrZjROqjFMQADYy4Wp72C6GhkitnFJT8z5bhG";
+const API_KEY = "write your api key here!!!";
 const URL_REQUEST = `https://quizapi.io/api/v1/questions?apiKey=${API_KEY}&category=code&limit=10`;
 
 function capitalize(str) {
