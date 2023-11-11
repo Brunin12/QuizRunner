@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quiz Runner | Enable JavaScript</title>
+
+    <link rel="shortcut icon" href="http://localhost:8080/dist/img/icons/favicon.ico" type="image/x-icon">
+
+    <link rel="manifest" href="http://localhost:8080/manifest.json">
+
+    <link rel="apple-touch-icon" href="http://localhost:8080/dist/img/icons/favicon.png">
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="http://localhost:8080/plugins/fontawesome-free/css/all.min.css" />
+    <!-- Theme style -->
+    <link rel="stylesheet" href="http://localhost:8080/dist/css/adminlte.min.css" />
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="http://localhost:8080/plugins/overlayScrollbars/css/OverlayScrollbars.min.css" />
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper" id="container">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1 class="m-0"></h1>
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container-fluid -->
+            </div>
+            <!-- /.content-header -->
+
+            <!-- Main content -->
+            <section class="content">
+                <div class="container-fluid">
+                    <!-- main row -->
+                    <section class="content mx-auto">
+                        <div class="error-page">
+                            <h2 class="headline text-danger">500</h2>
+                            <div class="error-content">
+                                <h3><i class="fas fa-exclamation-triangle text-danger"></i> Oops! Something went wrong.
+                                </h3>
+                                <p>
+                                    We apologize, but this website relies on JavaScript for enhanced security and
+                                    optimal performance.
+                                    Please enable JavaScript in your browser settings to fully access and enjoy the
+                                    features of this site.
+                                </p>
+                            </div>
+                        </div>
+
+                    </section>
+                </div>
+                <!-- /.content-wrapper -->
+                <!-- Control Sidebar -->
+                <aside class="control-sidebar control-sidebar-dark">
+                    <!-- Control sidebar content goes here -->
+                </aside>
+                <!-- /.control-sidebar -->
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery -->
+        <script src="http://localhost:8080/plugins/jquery/jquery.min.js"></script>
+        <!-- jQuery UI 1.11.4 -->
+        <script src="http://localhost:8080/plugins/jquery-ui/jquery-ui.min.js"></script>
+        <!-- Bootstrap 4 -->
+        <script src="http://localhost:8080/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <!-- overlayScrollbars -->
+        <script src="http://localhost:8080/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+        <!-- AdminLTE App -->
+        <script src="http://localhost:8080/dist/js/adminlte.js"></script>
+        <script>
+            // Verifica se o JavaScript está ativado
+            document.addEventListener('DOMContentLoaded', function () {
+                window.location.href = "http://localhost:8080/";
+            });
+        </script>
+
+</body>
+
+</html>

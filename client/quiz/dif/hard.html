@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quiz Runner | Hard</title>
+
+  <link rel="shortcut icon" href="http://localhost:8080/dist/img/icons/favicon.ico" type="image/x-icon">
+
+  <link rel="manifest" href="http://localhost:8080/manifest.json">
+
+  <link rel="apple-touch-icon" href="http://localhost:8080/dist/img/icons/favicon.png">
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="http://localhost:8080/plugins/fontawesome-free/css/all.min.css" />
+  <!-- Theme style -->
+  <link rel="stylesheet" href="http://localhost:8080/dist/css/adminlte.min.css" />
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="http://localhost:8080/plugins/overlayScrollbars/css/OverlayScrollbars.min.css" />
+  <!-- SweetAlert2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+  <div class="wrapper">
+    <!-- Preloader -->
+    <div class="preloader bg-dark text-light flex-column justify-content-center align-items-center">
+      <img class="animation__shake" src="http://localhost:8080/dist/img/CuriosityLogo.png" alt="BrunoSoft" height="60"
+        width="60" />
+    </div>
+
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+      <!-- Brand Logo -->
+      <a href="http://localhost:8080/" class="brand-link">
+        <img src="http://localhost:8080/dist/img/CuriosityLogo.png" alt="AdminLTE Logo"
+          class="brand-image img-circle elevation-3" style="opacity: 0.8" />
+        <span class="brand-text font-weight-light">Quiz Runner</span>
+      </a>
+
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+
+            <li class="nav-item menu-open">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-home"></i>
+                <p>
+                  Quiz
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="http://localhost:8080/quiz/language/php.html" class="nav-link">
+                    <i class="fab fa-php nav-icon"></i>
+                    <p>PHP</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="http://localhost:8080/quiz/language/javascript.html" class="nav-link">
+                    <i class="fab fa-js nav-icon"></i>
+                    <p>JavaScript</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="http://localhost:8080/quiz/language/html.html" class="nav-link">
+                    <i class="fab fa-html5 nav-icon"></i>
+                    <p>HTML</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="http://localhost:8080/quiz/dif/easy.html" class="nav-link">
+                    <i class="far fa-smile nav-icon"></i>
+                    <p>Easy</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="http://localhost:8080/quiz/dif/medium.html" class="nav-link">
+                    <i class="fas fa-circle nav-icon"></i>
+                    <p>Medium</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="http://localhost:8080/quiz/dif/hard.html" class="nav-link">
+                    <i class="fas fa-fire nav-icon"></i>
+                    <p>Hard</p>
+                  </a>
+                </li>
+
+
+              </ul>
+            </li>
+            <li class="nav-item menu-open">
+              <a href="http://localhost:8080/api/" class="nav-link">
+                <i class="nav-icon fas fa-server"></i>
+                <p>
+                  Local API
+
+                </p>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+      </div>
+      <!-- /.sidebar -->
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper" id="container">
+      <!-- Content Header (Page header) -->
+      <div class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-6">
+              <h1 class="m-0"></h1>
+            </div>
+            <!-- /.col -->
+          </div>
+          <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+      </div>
+      <!-- /.content-header -->
+
+      <!-- Main content -->
+      <section class="content">
+        <div class="container-fluid">
+          <!-- main row -->
+          <!-- Main content -->
+          <section class="content">
+            <div class="container-fluid">
+              <!-- main row -->
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="card card-primary">
+                    <div class="card-header">
+                      <h3 class="card-title">Hard Quiz</h3>
+                    </div>
+                    <div class="card-body">
+
+                      <div id="quiz-container">
+                        <h1 class="text-center">Loading... (99%)</h1>
+                      </div>
+
+                      <button id="next-question" class="btn btn-success mt-4">Next Question</button>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <!-- /.row (main row) -->
+
+
+
+
+            </div>
+            <!-- /.container-fluid -->
+          </section>
+          <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+          <!-- Control sidebar content goes here -->
+        </aside>
+        <!-- /.control-sidebar -->
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- jQuery -->
+    <script src="http://localhost:8080/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="http://localhost:8080/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="http://localhost:8080/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- overlayScrollbars -->
+    <script src="http://localhost:8080/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="http://localhost:8080/dist/js/adminlte.js"></script>
+    <!-- SweetAlert2 -->
+    <script src="../../plugins/sweetalert2/sweetalert2.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        let score = 0;
+        let currentQuestionIndex = 0;
+        let questions = [];
+        let correctAnswer = '';
+        let userAnswer = '';
+        let answerText = '';
+
+        function getButtonClass(option) {
+          switch (option) {
+            case 'answer_a':
+              return 'btn-primary';
+            case 'answer_b':
+              return 'btn-info';
+            case 'answer_c':
+              return 'btn-warning';
+            default:
+              return 'btn-success';
+          }
+        }
+
+        async function loadQuestions() {
+          try {
+           
+            const apiUrl = `http://localhost:1212/dif/hard`;
+            const data = await $.get(apiUrl);
+            questions = data;
+            loadQuestion(currentQuestionIndex);
+          } catch (error) {
+            console.error("Erro ao fazer a requisição:", error);
+          }
+        }
+
+        function loadQuestion(index) {
+          const question = questions[index];
+          correctAnswer = findCorrectAnswer(question);
+          answerText = question.answers[correctAnswer];
+
+          displayQuestion(question);
+        }
+
+        function findCorrectAnswer(question) {
+          return Object.keys(question.correct_answers).find(key => question.correct_answers[key] === 'true').slice(0, 8);
+        }
+
+        function displayQuestion(question) {
+          const quizContainer = $("#quiz-container");
+          quizContainer.empty();
+
+          const questionElement = $("<h4>").hide().text(getQuestionText(question)).fadeIn(500);
+          const difElement = $("<span class='text-orange'>").hide().text(`Difficulty: ${question.difficulty}`).fadeIn(500);
+          const multipleCorrectAnswersElement = $("<p class='text-info mb-3'>").hide().text(`Multiple Correct Answers: ${question.multiple_correct_answers}`).fadeIn(500);
+
+          quizContainer.append(questionElement, difElement, multipleCorrectAnswersElement, '<hr />');
+
+          for (let option in question.answers) {
+            const answerText = question.answers[option];
+            if (answerText) {
+              const btnClass = getButtonClass(option);
+              const optionElement = $("<a class='btn " + btnClass + " d-block mb-2'>").text(answerText).addClass("option").data("answer", option).hide().appendTo(quizContainer).fadeIn(800);
+              optionElement.click(() => checkAnswer(option));
+            }
+          }
+        }
+
+        function getQuestionText(question) {
+          return question.tags && question.tags.length > 0 ? `${question.tags[0].name}: ${question.question}` : question.question;
+        }
+
+        function checkAnswer(userChoice) {
+          const btnClass = getButtonClass(correctAnswer);
+          const container = $("#container");
+          const quizContainer = $("#quiz-container");
+
+          let questionElement = '';
+
+          quizContainer.empty();
+
+
+          if (userChoice === correctAnswer) {
+            container.animate({ backgroundColor: "green" }, 150);
+            score++;
+            questionElement = $("<h4 class='text-center text-success'>").text(`Right! Score: ${score}/${currentQuestionIndex + 1}`);
+          } else {
+            container.animate({ backgroundColor: "red" }, 50);
+            questionElement = $("<h4 class='text-center text-danger'>").text(`Wrong! Score: ${score}/${currentQuestionIndex + 1}`);
+          }
+
+          const correctAnswerElement = $("<a class='btn shadow " + btnClass + " d-block mb-2'>").text(answerText).hide().fadeIn(200);
+          quizContainer.append(questionElement, correctAnswerElement);
+
+          setTimeout(function () {
+            currentQuestionIndex++;
+            if (currentQuestionIndex 
+            == (questions.length - 1)) {
+              $('#next-question').hide(300);
+            }
+
+              if (currentQuestionIndex < questions.length) {
+                loadQuestion(currentQuestionIndex);
+                container.css("background-color", "");
+              } else {
+                Swal.fire({
+                  title: 'Quiz Completed!',
+                  text: `Score: ${score}/10`,
+                  icon: 'success',
+                }).then(() => {
+                  window.location.href = "http://localhost:8080/";
+                });
+              }
+          }, 2000);
+        }
+
+        loadQuestions();
+
+        $("#next-question").click(function () {
+          console.log(questions);
+          if (currentQuestionIndex < (questions.length - 1)) {
+            currentQuestionIndex++;
+            loadQuestion(currentQuestionIndex);
+          } else {
+            $('#next-question').hide(300);
+          }
+
+        });
+      });
+
+
+
+    </script>
+    <noscript>
+      <p>Por favor, ative o JavaScript para visualizar esta página.</p>
+      <meta http-equiv="refresh" content="0; URL='../../noscript.html'" />
+    </noscript>
+
+</body>
+
+</html>

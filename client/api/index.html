@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quiz Runner | API</title>
+
+    <link rel="shortcut icon" href="localhost:8080/dist/img/icons/favicon.ico" type="image/x-icon">
+
+    <link rel="manifest" href="localhost:8080/dist/img/icons/manifest.json">
+
+    <link rel="apple-touch-icon" href="localhost:8080/dist/img/icons/favicon.png">
+
+    <!-- Google Font: Source Sans Pro -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="http://localhost:8080/plugins/fontawesome-free/css/all.min.css"
+    />
+    <!-- Ionicons -->
+    <link
+      rel="stylesheet"
+      href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
+    />
+    <!-- Tempusdominus Bootstrap 4 -->
+    <link
+      rel="stylesheet"
+      href="http://localhost:8080/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css"
+    />
+    <!-- iCheck -->
+    <link
+      rel="stylesheet"
+      href="http://localhost:8080/plugins/icheck-bootstrap/icheck-bootstrap.min.css"
+    />
+    <!-- JQVMap -->
+    <link rel="stylesheet" href="http://localhost:8080/plugins/jqvmap/jqvmap.min.css" />
+    <!-- Theme style -->
+    <link rel="stylesheet" href="http://localhost:8080/dist/css/adminlte.min.css" />
+    <!-- overlayScrollbars -->
+    <link
+      rel="stylesheet"
+      href="http://localhost:8080/plugins/overlayScrollbars/css/OverlayScrollbars.min.css"
+    />
+    <!-- Daterange picker -->
+    <link
+      rel="stylesheet"
+      href="http://localhost:8080/plugins/daterangepicker/daterangepicker.css"
+    />
+    <!-- summernote -->
+    <link
+      rel="stylesheet"
+      href="http://localhost:8080/plugins/summernote/summernote-bs4.min.css"
+    />
+  </head>
+  <body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+      <!-- Preloader -->
+      <div class="preloader bg-dark text-light flex-column justify-content-center align-items-center">
+        <img class="animation__shake" src="http://localhost:8080/dist/img/CuriosityLogo.png" alt="BrunoSoft" height="60"
+          width="60" />
+      </div>
+
+      <!-- Main Sidebar Container -->
+      <aside class="main-sidebar sidebar-dark-primary elevation-4">
+        <!-- Brand Logo -->
+        <a href="http://localhost:8080/" class="brand-link">
+          <img
+            src="http://localhost:8080/dist/img/CuriosityLogo.png"
+            alt="AdminLTE Logo"
+            class="brand-image img-circle elevation-3"
+            style="opacity: 0.8"
+          />
+          <span class="brand-text font-weight-light">Quiz Runner</span>
+        </a>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+          <!-- Sidebar Menu -->
+          <nav class="mt-2">
+            <ul
+              class="nav nav-pills nav-sidebar flex-column"
+              data-widget="treeview"
+              role="menu"
+              data-accordion="false"
+            >
+              <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+
+              <li class="nav-item menu-open">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fas fa-home"></i>
+                  <p>
+                    Quiz
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a
+                      href="http://localhost:8080/quiz/language/php.html"
+                      class="nav-link"
+                    >
+                      <i class="fab fa-php nav-icon"></i>
+                      <p>PHP</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="http://localhost:8080/quiz/language/javascript.html" class="nav-link">
+                      <i class="fab fa-js nav-icon"></i>
+                      <p>JavaScript</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="http://localhost:8080/quiz/language/html.html" class="nav-link">
+                      <i class="fab fa-html5 nav-icon"></i>
+                      <p>HTML</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="http://localhost:8080/quiz/dif/easy.html" class="nav-link">
+                      <i class="far fa-smile nav-icon"></i>
+                      <p>Easy</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="http://localhost:8080/quiz/dif/medium.html" class="nav-link">
+                      <i class="fas fa-circle nav-icon"></i>
+                      <p>Medium</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="http://localhost:8080/quiz/dif/hard.html" class="nav-link">
+                      <i class="fas fa-fire nav-icon"></i>
+                      <p>Hard</p>
+                    </a>
+                  </li>
+                 
+                  
+                </ul>
+              </li>
+              <li class="nav-item menu-open">
+                <a href="http://localhost:8080/api/" class="nav-link">
+                  <i class="nav-icon fas fa-server"></i>
+                  <p>
+                    Local API
+                   
+                  </p>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <!-- /.sidebar-menu -->
+        </div>
+        <!-- /.sidebar -->
+      </aside>
+
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <div class="content-header">
+          <div class="container-fluid">
+            <div class="row mb-2">
+              <div class="col-sm-6">
+                <h1 class="m-0"></h1>
+              </div>
+              <!-- /.col -->
+            </div>
+            <!-- /.row -->
+          </div>
+          <!-- /.container-fluid -->
+        </div>
+        <!-- /.content-header -->
+
+        <!-- Main content -->
+        <section class="content">
+          <div class="container-fluid">
+            <!-- main row -->
+
+            <!-- general form elements -->
+            <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">Request Params</h3>
+              </div>
+              <!-- /.card-header -->
+              <!-- form start -->
+              
+                <div class="card-body">
+                  <div class="form-group">
+                    <div class="form-group">
+                      <label for="difficulty">Difficulty</label>
+                      <select class="form-control" id="difficulty">
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="language">Programming/Markup Language</label>
+                      <select class="form-control" id="language">
+                        <option value="html">HTML</option>
+                        <option value="php">PHP</option>
+                        <option value="javascript">JavaScript</option>
+                      </select>
+                    </div>
+                    
+                </div>
+                <!-- /.card-body -->
+
+                <div class="card-footer">
+                  <button  onclick="makeAPIRequest()" class="btn btn-primary">Make a Request</button>
+                </div>
+              
+            </div>
+            <!-- /.card -->
+
+            <pre
+  id="result"
+  class="bg-dark text-white m-3 rounded p-2 d-none"
+></pre>
+
+<script>
+  function makeAPIRequest() {
+    console.log("Request Query in Run");
+    const pre = $("#result");
+    const dif = $("#difficulty").val();
+    const lang = $("#language").val();
+    console.log("Define some CONST's");
+
+    $.ajax({
+      url: "http://localhost:1212/" + lang,
+      type: "GET",
+      data: { difficulty: dif },
+      dataType: "json",
+      success: function (data) {
+        console.log("Ajax Success", data);
+        pre.empty(); 
+        const stringifiedData = JSON.stringify(data, null, 2); 
+        pre.html(stringifiedData); 
+        pre.hide();
+        pre.removeClass('d-none');
+        pre.show(1000); 
+      },
+      error: function (error) {
+        console.error("Erro ao fazer a requisição:", error);
+      },
+    });
+    console.log("Exit...");
+  }
+</script>
+
+
+            <!-- /.row (main row) -->
+          </div>
+          <!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+      </div>
+      <!-- /.content-wrapper -->
+      <footer class="main-footer">
+        <strong
+          >Copyright &copy; 2023-2023
+          <a href="https://brunin12.github.io/Soundcar/">BrunoSoft</a>.</strong
+        >
+        All rights reserved.
+        <div class="float-right d-none d-sm-inline-block">
+          <b>Version</b> 1.0.0
+        </div>
+      </footer>
+
+      <!-- Control Sidebar -->
+      <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+      </aside>
+      <!-- /.control-sidebar -->
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- jQuery -->
+    <script src="http://localhost:8080/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="http://localhost:8080/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <script>
+      $.widget.bridge("uia", $.ui.a);
+    </script>
+    <!-- Bootstrap 4 -->
+    <script src="http://localhost:8080/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- ChartJS -->
+    <script src="http://localhost:8080/plugins/chart.js/Chart.min.js"></script>
+    <!-- Sparkline -->
+    <script src="http://localhost:8080/plugins/sparklines/sparkline.js"></script>
+    <!-- JQVMap -->
+    <script src="http://localhost:8080/plugins/jqvmap/jquery.vmap.min.js"></script>
+    <script src="http://localhost:8080/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+    <!-- jQuery Knob Chart -->
+    <script src="http://localhost:8080/plugins/jquery-knob/jquery.knob.min.js"></script>
+    <!-- daterangepicker -->
+    <script src="http://localhost:8080/plugins/moment/moment.min.js"></script>
+    <script src="http://localhost:8080/plugins/daterangepicker/daterangepicker.js"></script>
+    <!-- Tempusdominus Bootstrap 4 -->
+    <script src="http://localhost:8080/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+    <!-- Summernote -->
+    <script src="http://localhost:8080/plugins/summernote/summernote-bs4.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="http://localhost:8080/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="http://localhost:8080/dist/js/adminlte.js"></script>
+    <noscript>
+      <p>Por favor, ative o JavaScript para visualizar esta página.</p>
+      <meta http-equiv="refresh" content="0; URL='../../noscript.html'"/>
+    </noscript>
+  </body>
+</html>

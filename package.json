@@ -1,0 +1,32 @@
+{
+  "name": "quiz-runner",
+  "version": "1.0.0",
+  "description": "um site que eu planejei quando tinha 11 anos e só fui fazer 2 anos depois.",
+  "main": "server/main.js",
+  "scripts": {
+    "start": "cls && nodemon server/main.js",
+    "web": "cls && npx http-server client/",
+    "test": "cls",
+    "upload": "node upload.js"
+  },
+  "keywords": [
+    "quiz",
+    "runner",
+    "quiz runner",
+    "brunosoft",
+    "bruno soft",
+    "bruninsoft",
+    "brunin soft",
+    "php html js",
+    "dashboard"
+  ],
+  "homepage": "http://localhost:8080/",
+  "author": "BrunoSoft",
+  "license": "ISC",
+  "dependencies": {
+    "@fastify/cors": "^8.4.1",
+    "axios": "^1.6.1",
+    "fastify": "^4.24.3",
+    "nodemon": "^3.0.1"
+  }
+}

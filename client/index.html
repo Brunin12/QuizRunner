@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quiz Runner | Home</title>
+
+    <link rel="shortcut icon" href="http://localhost:8080/dist/img/icons/favicon.ico" type="image/x-icon">
+
+    <link rel="manifest" href="http://localhost:8080/manifest.json">
+
+    <link rel="apple-touch-icon" href="http://localhost:8080/dist/img/icons/favicon.png">
+
+    <!-- Google Font: Source Sans Pro -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="http://localhost:8080/plugins/fontawesome-free/css/all.min.css"
+    />
+
+    <!-- Theme style -->
+    <link rel="stylesheet" href="http://localhost:8080/dist/css/adminlte.min.css" />
+    <!-- overlayScrollbars -->
+    <link
+      rel="stylesheet"
+      href="http://localhost:8080/plugins/overlayScrollbars/css/OverlayScrollbars.min.css"
+    />
+    
+  </head>
+  <body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+      <!-- Preloader -->
+      <div class="preloader bg-dark text-light flex-column justify-content-center align-items-center">
+        <img class="animation__shake" src="http://localhost:8080/dist/img/CuriosityLogo.png" alt="BrunoSoft" height="60"
+          width="60" />
+      </div>
+
+      <!-- Main Sidebar Container -->
+      <aside class="main-sidebar sidebar-dark-primary elevation-4">
+        <!-- Brand Logo -->
+        <a href="http://localhost:8080/" class="brand-link">
+          <img
+            src="http://localhost:8080/dist/img/CuriosityLogo.png"
+            alt="AdminLTE Logo"
+            class="brand-image img-circle elevation-3"
+            style="opacity: 0.8"
+          />
+          <span class="brand-text font-weight-light">Quiz Runner</span>
+        </a>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+          <!-- Sidebar Menu -->
+          <nav class="mt-2">
+            <ul
+              class="nav nav-pills nav-sidebar flex-column"
+              data-widget="treeview"
+              role="menu"
+              data-accordion="false"
+            >
+              <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+
+              <li class="nav-item menu-open">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fas fa-home"></i>
+                  <p>
+                    Quiz
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a
+                      href="http://localhost:8080/quiz/language/php.html"
+                      class="nav-link"
+                    >
+                      <i class="fab fa-php nav-icon"></i>
+                      <p>PHP</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="http://localhost:8080/quiz/language/javascript.html" class="nav-link">
+                      <i class="fab fa-js nav-icon"></i>
+                      <p>JavaScript</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="http://localhost:8080/quiz/language/html.html" class="nav-link">
+                      <i class="fab fa-html5 nav-icon"></i>
+                      <p>HTML</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="http://localhost:8080/quiz/dif/easy.html" class="nav-link">
+                      <i class="far fa-smile nav-icon"></i>
+                      <p>Easy</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="http://localhost:8080/quiz/dif/medium.html" class="nav-link">
+                      <i class="fas fa-circle nav-icon"></i>
+                      <p>Medium</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="http://localhost:8080/quiz/dif/hard.html" class="nav-link">
+                      <i class="fas fa-fire nav-icon"></i>
+                      <p>Hard</p>
+                    </a>
+                  </li>
+                 
+                  
+                </ul>
+              </li>
+              <li class="nav-item menu-open">
+                <a href="http://localhost:8080/api/" class="nav-link">
+                  <i class="nav-icon fas fa-server"></i>
+                  <p>
+                    Local API
+                   
+                  </p>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <!-- /.sidebar-menu -->
+        </div>
+        <!-- /.sidebar -->
+      </aside>
+
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <div class="content-header">
+          <div class="container-fluid">
+            <div class="row mb-2">
+              <div class="col-sm-6">
+                <h1 class="m-0"></h1>
+                
+              </div>
+              <!-- /.col -->
+            </div>
+            <!-- /.row -->
+          </div>
+          <!-- /.container-fluid -->
+        </div>
+        <!-- /.content-header -->
+
+        <!-- Main content -->
+        <section class="content">
+          <div class="container-fluid">
+            <!-- Small boxes (Stat box) -->
+            <div class="row">
+              <div class="col-lg-3 col-6">
+                <!-- small box -->
+                <div class="small-box bg-info">
+                  <div class="inner">
+                    <h3>756</h3>
+
+                    <p>Megabites of Data</p>
+                  </div>
+                  <div class="icon">
+                    <i class="ion ion-bag"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- ./col -->
+              <div class="col-lg-3 col-6">
+                <!-- small box -->
+                <div class="small-box bg-success">
+                  <div class="inner">
+                    <h3>1700</h3>
+
+                    <p>Questions</p>
+                  </div>
+                  <div class="icon">
+                    <i class="ion ion-stats-bars"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- ./col -->
+              <div class="col-lg-3 col-6">
+                <!-- small box -->
+                <div class="small-box bg-warning">
+                  <div class="inner">
+                    <h3>44</h3>
+
+                    <p>Requests per day</p>
+                  </div>
+                  <div class="icon">
+                    <i class="ion ion-person-add"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- ./col -->
+              <div class="col-lg-3 col-6">
+                <!-- small box -->
+                <div class="small-box bg-danger">
+                  <div class="inner">
+                    <h3>5</h3>
+
+                    <p>Active Users</p>
+                  </div>
+                  <div class="icon">
+                    <i class="ion ion-pie-graph"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- ./col -->
+            </div>
+            <!-- /.row -->
+            <!-- main row -->
+            <div class="row">
+              <div class="row p-2">
+                <div class="col-4">
+                  <div class="card">
+                    <div class="card-header">
+                      <h3 class="card-title text-indigo">PHP</h3>
+                    </div>
+                    <div class="card-body">
+                      <p>
+                        Lets put your PHP knowledge in test and create
+                        responsive and fast websites!!!
+                      </p>
+                      <a href="quiz/language/php.html" class="btn btn-primary"
+                        >Try PHP</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="card">
+                    <div class="card-header">
+                      <h3 class="card-title text-warning">JavaScript</h3>
+                    </div>
+                    <div class="card-body">
+                      <p>
+                        JavaScript its a very popular language, do you want test
+                        your abilities?
+                      </p>
+                      <a
+                        href="quiz/language/javascript.html"
+                        class="btn btn-warning"
+                        >Try JavaScript</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="card">
+                    <div class="card-header">
+                      <h3 class="card-title text-orange">HTML</h3>
+                    </div>
+                    <div class="card-body">
+                      <p>
+                        Before learn PHP, you have to learn about HTML and CSS
+                      </p>
+                      <a href="quiz/language/html.html" class="btn btn-danger"
+                        >Try HTML</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row p-2">
+                <div class="col-4">
+                  <div class="card">
+                    <div class="card-header">
+                      <h3 class="card-title text-success">Easy</h3>
+                    </div>
+                    <div class="card-body">
+                      <p>
+                        Lets put your PHP knowledge in test and create
+                        responsive and fast websites!!!
+                      </p>
+                      <a href="quiz/dif/easy.html" class="btn btn-success"
+                        >Try Easy</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="card">
+                    <div class="card-header">
+                      <h3 class="card-title text-orange">Medium</h3>
+                    </div>
+                    <div class="card-body">
+                      <p>
+                        JavaScript its a very popular language, do you want test
+                        your abilities?
+                      </p>
+                      <a href="quiz/dif/medium.html" class="btn btn-warning"
+                        >Try Medium</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="card">
+                    <div class="card-header">
+                      <h3 class="card-title text-danger text-bold">Hard</h3>
+                    </div>
+                    <div class="card-body">
+                      <p>
+                        Before learn PHP, you have to learn about HTML and CSS
+                      </p>
+                      <a href="quiz/dif/hard.html" class="btn btn-danger"
+                        >Try Hard</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <!-- Widget: user widget style 1 -->
+                <div class="card card-widget widget-user shadow">
+                  <!-- Add the bg color to the header using any of the bg-* classes -->
+                  <div class="widget-user-header bg-info">
+                    <h3 class="widget-user-username">Bruno Parreira</h3>
+                    <h5 class="widget-user-desc">Founder & Programmer</h5>
+                  </div>
+                  <div class="widget-user-image">
+                    <img
+                      class="img-circle elevation-2"
+                      src="../dist/img/bruno.jpeg"
+                      alt="User Avatar"
+                    />
+                  </div>
+                  <div class="card-footer">
+                    <div class="row">
+                      <div class="col-sm-4 border-right">
+                        <div class="description-block">
+                          <h5 class="description-header">13,200+</h5>
+                          <span class="description-text"
+                            >HOURS IN PROGRAMMING</span
+                          >
+                        </div>
+                        <!-- /.description-block -->
+                      </div>
+                      <!-- /.col -->
+                      <div class="col-sm-4 border-right">
+                        <div class="description-block">
+                          <h5 class="description-header">50+</h5>
+                          <span class="description-text">PROJECTS</span>
+                        </div>
+                        <!-- /.description-block -->
+                      </div>
+                      <!-- /.col -->
+                      <div class="col-sm-4">
+                        <div class="description-block">
+                          <h5 class="description-header">HALF DECADE</h5>
+                          <span class="description-text">EXPERIENCE</span>
+                        </div>
+                        <!-- /.description-block -->
+                      </div>
+                      <!-- /.col -->
+                    </div>
+                    <!-- /.row -->
+                  </div>
+                </div>
+                <!-- /.widget-user -->
+              </div>
+            </div>
+            <!-- /.row (main row) -->
+          </div>
+          <!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+      </div>
+      <!-- /.content-wrapper -->
+      <footer class="main-footer">
+        <strong
+          >Copyright &copy; 2023-2023
+          <a href="https://brunin12.github.io/Soundcar/">BrunoSoft</a>.</strong
+        >
+        All rights reserved.
+        <div class="float-right d-none d-sm-inline-block">
+          <b>Version</b> 1.0.0
+        </div>
+      </footer>
+
+      <!-- Control Sidebar -->
+      <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+      </aside>
+      <!-- /.control-sidebar -->
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- jQuery -->
+    <script src="http://localhost:8080/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="http://localhost:8080/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="http://localhost:8080/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- overlayScrollbars -->
+    <script src="http://localhost:8080/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="http://localhost:8080/dist/js/adminlte.js"></script>
+    <!-- Verificação de JavaScript desativado -->
+   <!-- Verificação de JavaScript desativado -->
+   <noscript>
+    <p>Por favor, ative o JavaScript para visualizar esta página.</p>
+    <meta http-equiv="refresh" content="0; URL='noscript.html'"/>
+  </noscript>
+  </body>
+</html>

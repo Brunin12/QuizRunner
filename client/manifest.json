@@ -1,0 +1,48 @@
+{
+    "name": "Curiosity - Quiz",
+    "short_name": "Curiosity",
+    "shortcuts": [
+        {
+            "name": "Take Quiz",
+            "description": "Start a new quiz",
+            "url": "/quiz",
+            "icons": [
+                {
+                    "src": "/dist/img/icons/quiz-icon.png",
+                    "sizes": "192x192",
+                    "type": "image/png"
+                }
+            ]
+        }
+    ],
+    "start_url": "/",
+    "icons": [
+        {
+            "src": "/dist/img/icons/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/dist/img/icons/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#808080",
+    "background_color": "#FFFFFF",
+    "splash_screen": {
+        "show": true,
+        "fullScreen": true,
+        "showSpinner": true,
+        "backgroundColor": "#FFFFFF",
+        "images": [
+            {
+                "src": "/dist/img/icons/splash-icon.png",
+                "sizes": "192x192",
+                "type": "image/png"
+            }
+        ]
+    },
+    "display": "standalone",
+    "display_mode": "standalone"
+}
