@@ -1,4 +1,4 @@
-# Quiz Runner
+# Quiz Runner - Bruno Soft
 
 ![Quiz Runner Logo](client/dist/img/CuriosityLogo.png)
 

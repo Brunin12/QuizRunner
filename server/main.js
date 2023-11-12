@@ -24,11 +24,11 @@ let result = '';
 
 const makeRequest = async (url) => {
   try {
+    console.log(url);
+    console.log(URL_REQUEST);
     const fullURL = new URL(URL_REQUEST, url);
-    console.log('url', fullURL.toString());
+    console.log(fullURL.toString());
     const response = axios.get(fullURL.toString());
-    console.log('status',response.status);
-    console.log('data', response.data);
     if (response.status === 404) {
 
     } else {
