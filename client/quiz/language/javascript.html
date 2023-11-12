@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Quiz Runner | PHP</title>
+  <title>Quiz Runner | JavaScript</title>
 
   <link rel="shortcut icon" href="http://localhost:8080/dist/img/icons/favicon.ico" type="image/x-icon">
 
@@ -20,13 +20,10 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="http://localhost:8080/dist/css/adminlte.min.css" />
   <!-- overlayScrollbars -->
-  <link
-    rel="stylesheet"
-    href="http://localhost:8080/plugins/overlayScrollbars/css/OverlayScrollbars.min.css"
-  />
+  <link rel="stylesheet" href="http://localhost:8080/plugins/overlayScrollbars/css/OverlayScrollbars.min.css" />
   <!-- SweetAlert2 -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  
+
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -148,14 +145,14 @@
                 <div class="col-md-12">
                   <div class="card card-primary">
                     <div class="card-header">
-                      <h3 class="card-title">PHP Quiz</h3>
+                      <h3 class="card-title">JavaScript Quiz</h3>
                     </div>
                     <div class="card-body">
 
                       <div id="quiz-container">
                         <h1 class="text-center">Loading... (99%)</h1>
                       </div>
-                      
+
                       <button id="next-question" class="btn btn-success mt-4">Next Question</button>
                     </div>
                   </div>
@@ -177,7 +174,7 @@
                   <button type="submit" id="reload-quiz" class="btn btn-primary w-100">Reload</button>
                 </div>
               </div>
-              
+
 
 
             </div>
@@ -232,8 +229,13 @@
         async function loadQuestions() {
           try {
             const difficulty = $("#difficulty-select").val();
+            console.log('dificultade:', difficulty);
             const apiUrl = `http://localhost:1212/javascript`;
-            const data = await $.ajax({ url: apiUrl, type: "GET", data: { difficulty }, dataType: "json" });
+            const data = await $.ajax({
+              url: apiUrl, type: "GET",
+              //data: { difficulty },
+              dataType: "json"
+            });
             questions = data;
             loadQuestion(currentQuestionIndex);
           } catch (error) {
@@ -301,30 +303,30 @@
 
           setTimeout(function () {
             currentQuestionIndex++;
-            if (currentQuestionIndex 
-            == (questions.length - 1)) {
+            if (currentQuestionIndex
+              == (questions.length - 1)) {
               $('#next-question').hide(300);
             }
 
-              if (currentQuestionIndex < questions.length) {
-                loadQuestion(currentQuestionIndex);
-                container.css("background-color", "");
-              } else {
-                Swal.fire({
-                  title: 'Quiz Completed!',
-                  text: `Score: ${score}/10`,
-                  icon: 'success',
-                }).then(() => {
-                  window.location.href = "http://localhost:8080/";
-                });
-              }
+            if (currentQuestionIndex < questions.length) {
+              loadQuestion(currentQuestionIndex);
+              container.css("background-color", "");
+            } else {
+              Swal.fire({
+                title: 'Quiz Completed!',
+                text: `Score: ${score}/10`,
+                icon: 'success',
+              }).then(() => {
+                window.location.href = "http://localhost:8080/";
+              });
+            }
           }, 2000);
         }
 
         loadQuestions();
 
         $("#next-question").click(function () {
-          console.log(questions);
+
           if (currentQuestionIndex < (questions.length - 1)) {
             currentQuestionIndex++;
             loadQuestion(currentQuestionIndex);
@@ -344,7 +346,7 @@
     </script>
     <noscript>
       <p>Por favor, ative o JavaScript para visualizar esta página.</p>
-      <meta http-equiv="refresh" content="0; URL='../../noscript.html'"/>
+      <meta http-equiv="refresh" content="0; URL='../../noscript.html'" />
     </noscript>
 
 </body>

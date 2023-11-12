@@ -1,13 +1,13 @@
 {
   "name": "quiz-runner",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "um site que eu planejei quando tinha 11 anos e só fui fazer 2 anos depois.",
   "main": "server/main.js",
   "scripts": {
-    "start": "cls && nodemon server/main.js",
+    "start": "npm run test && nodemon server/main.js",
     "web": "cls && npx http-server client/",
     "test": "cls",
-    "upload": "node upload.js"
+    "upload": "npm run test && node upload.js"
   },
   "keywords": [
     "quiz",

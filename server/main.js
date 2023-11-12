@@ -8,38 +8,36 @@ fastify.register(cors, {
   allowedHeaders: ["Content-Type", "Authorization"], 
 });
 
-const API_KEY = "yxcnrZjROqjFMQADYy4Wp72C6GhkitnFJT8z5bhG";
-const URL_REQUEST = `https://quizapi.io/api/v1/questions?apiKey=${API_KEY}&category=code&limit=10`;
+const PORT = 1212;
+const API_KEY = "d0hfBe1tC1BmkkmbPXPqW2qd0Tr5WtuzdT8og9UV";
+const BASE_URL = "https://quizapi.io/api/v1/questions";
+const URL_REQUEST = `${BASE_URL}?apiKey=${API_KEY}&category=code&limit=10`;
 
-function capitalize(str) {
-  if (typeof str !== "string" || str.length === 0) {
-    return str;
-  }
-  return str.charAt(0).toUpperCase() + str.slice(1);
-}
+let result = '';
 
 const makeRequest = async (url) => {
   try {
-    const response = await axios.get(URL_REQUEST + url);
-    return response.data;
-  } catch (error) {
-    if (error.response) {
-      console.error("Erro na resposta do servidor:", error.response.data);
-    } else if (error.request) {
-      console.error("Sem resposta do servidor:", error.request);
+    const fullURL = new URL(URL_REQUEST, url);
+    console.log('url', fullURL.toString());
+    const response = axios.get(fullURL.toString());
+    console.log('status',response.status);
+    console.log('data', response.data);
+    if (response.status === 404) {
+
     } else {
-      console.error("Erro na configuração da requisição:", error.message);
+      result = response.data;
+      return result;
     }
-    throw error;
+  } catch (error) {
+    throw Error;
   }
 };
 
 fastify.get("/", async (request, reply) => {
   try {
-    const response = await makeRequest("");
+    const response = await makeRequest('');
     return reply.send(response);
   } catch (error) {
-    console.error("Erro ao fazer requisição:", error);
     return reply.send(error);
   }
 });
@@ -51,7 +49,6 @@ fastify.get("/dif/:difficulty", async (request, reply) => {
     const response = await makeRequest(queryParams);
     return reply.send(response);
   } catch (error) {
-    console.error("Erro ao fazer requisição:", error);
     return reply.send(error);
   }
 });
@@ -72,9 +69,9 @@ fastify.get("/:language", async (request, reply) => {
 
   try {
     const response = await makeRequest(queryParams);
+    console.log(response);
     return reply.send(response);
   } catch (error) {
-    console.error("Erro ao fazer requisição:", error);
     return reply.send(error);
   }
 });
