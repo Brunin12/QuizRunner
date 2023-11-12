@@ -1,3 +1,10 @@
+/****************************************************
+ * Propriedade de Brunosoft. Todos os direitos reservados.
+ * 
+ * O uso não autorizado deste código é estritamente proibido.
+ * Qualquer reprodução, modificação ou distribuição sem permissão é uma violação de direitos autorais.
+ ****************************************************/
+
 const fastify = require("fastify")({ logger: false });
 const axios = require("axios");
 const cors = require("@fastify/cors");
@@ -8,15 +15,10 @@ fastify.register(cors, {
   allowedHeaders: ["Content-Type", "Authorization"], 
 });
 
-<<<<<<< HEAD
 const PORT = 1212;
 const API_KEY = "d0hfBe1tC1BmkkmbPXPqW2qd0Tr5WtuzdT8og9UV";
 const BASE_URL = "https://quizapi.io/api/v1/questions";
 const URL_REQUEST = `${BASE_URL}?apiKey=${API_KEY}&category=code&limit=10`;
-=======
-const API_KEY = "write your api key here!!!";
-const URL_REQUEST = `https://quizapi.io/api/v1/questions?apiKey=${API_KEY}&category=code&limit=10`;
->>>>>>> 388d74c643aea87e486152bef48d4c344b5f1ea7
 
 let result = '';
 

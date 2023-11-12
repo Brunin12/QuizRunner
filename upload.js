@@ -1,3 +1,10 @@
+/****************************************************
+ * Propriedade de BrunoSoft. Todos os direitos reservados.
+ * 
+ * O uso não autorizado deste código é estritamente proibido.
+ * Qualquer reprodução, modificação ou distribuição sem permissão é uma violação de direitos autorais.
+ ****************************************************/
+
 const { exec } = require("child_process");
 const fs = require("fs");
 const { version } = require("os");
@@ -25,7 +32,7 @@ exec("git init", (error, stdout, stderr) => {
       return;
     }
     exec(
-      `git commit -m "Update v${packageVersion}"`,
+      `git commit -m "Update v(${packageVersion})"`,
       (error, stdout, stderr) => {
         if (error) {
           console.error(`Erro ao fazer commit: ${error}`);
