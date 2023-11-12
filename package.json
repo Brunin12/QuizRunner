@@ -1,6 +1,6 @@
 {
   "name": "quiz-runner",
-  "version": "BETA",
+  "version": "1.0.0 - ALFA",
   "description": "um site que eu planejei quando tinha 11 anos e só fui fazer 2 anos depois.",
   "main": "server/main.js",
   "scripts": {

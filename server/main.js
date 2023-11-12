@@ -1,5 +1,5 @@
 /****************************************************
- * Propriedade de Brunosoft. Todos os direitos reservados.
+ * Propriedade de BrunoSoft. Todos os direitos reservados.
  * 
  * O uso não autorizado deste código é estritamente proibido.
  * Qualquer reprodução, modificação ou distribuição sem permissão é uma violação de direitos autorais.
