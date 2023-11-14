@@ -1,6 +1,6 @@
 # Quiz Runner - Bruno Soft
 
-![Quiz Runner Logo](client/dist/img/CuriosityLogo.png)
+![Quiz Runner Logo](client/dist/img/icons/favicon-32x32.png)
 
 ## Descrição
 
