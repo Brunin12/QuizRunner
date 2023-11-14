@@ -238,7 +238,7 @@
         async function loadQuestions() {
           try {
             const difficulty = $("#difficulty-select").val();
-            const apiUrl = `http://localhost:1212/html`;
+            const apiUrl = `https://quizapi.io/api/v1/questions?apiKey=d0hfBe1tC1BmkkmbPXPqW2qd0Tr5WtuzdT8og9UV&category=code&limit=10&tags=HTML`;
             const data = await $.ajax({ url: apiUrl, type: "GET", data: { difficulty }, dataType: "json" });
             questions = data;
             loadQuestion(currentQuestionIndex);

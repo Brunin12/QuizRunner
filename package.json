@@ -2,10 +2,10 @@
   "name": "quiz-runner",
   "version": "3.0.1",
   "description": "um site que eu planejei quando tinha 11 anos e só fui fazer 2 anos depois.",
-  "main": "server/main.js",
+  "main": "client/index.html",
   "scripts": {
     "start": "npm run test && nodemon server/main.js",
-    "web": "cls && npx http-server client/",
+    "web": "npm run test && npx http-server client/",
     "test": "cls && echo Test 1: Pass && echo Test 2: Pass && echo Test 3: Pass && echo Test 4: Pass && echo Test 5: Pass && echo Test 6: Pass && echo Test 7: Pass",
     "upload": "npm run test && node upload.js"
   },

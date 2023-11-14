@@ -224,7 +224,7 @@
         async function loadQuestions() {
           try {
            
-            const apiUrl = `http://localhost:1212/dif/hard`;
+            const apiUrl = `https://quizapi.io/api/v1/questions?apiKey=d0hfBe1tC1BmkkmbPXPqW2qd0Tr5WtuzdT8og9UV&category=code&difficulty=Hard&limit=10`;
             const data = await $.get(apiUrl);
             questions = data;
             loadQuestion(currentQuestionIndex);

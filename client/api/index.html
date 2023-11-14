@@ -172,17 +172,17 @@
                     <div class="form-group">
                       <label for="difficulty">Difficulty</label>
                       <select class="form-control" id="difficulty">
-                        <option value="easy">Easy</option>
-                        <option value="medium">Medium</option>
-                        <option value="hard">Hard</option>
+                        <option value="Easy">Easy</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Hard">Hard</option>
                       </select>
                     </div>
                     <div class="form-group">
                       <label for="language">Programming/Markup Language</label>
                       <select class="form-control" id="language">
-                        <option value="html">HTML</option>
-                        <option value="php">PHP</option>
-                        <option value="javascript">JavaScript</option>
+                        <option value="HTML">HTML</option>
+                        <option value="PHP">PHP</option>
+                        <option value="JavaScript">JavaScript</option>
                       </select>
                     </div>
                     
@@ -210,7 +210,7 @@
     console.log("Define some CONST's");
 
     $.ajax({
-      url: "http://localhost:1212/" + lang,
+      url: `https://quizapi.io/api/v1/questions?apiKey=d0hfBe1tC1BmkkmbPXPqW2qd0Tr5WtuzdT8og9UV&category=code&limit=104${lang ? '&tags=' + lang : ''}${dif ? '&difficulty=' + dif : ''}`,
       type: "GET",
       data: { difficulty: dif },
       dataType: "json",
