@@ -1,7 +1,4 @@
-# Quiz Runner - Bruno Soft
-
-![Quiz Runner Logo](client/dist/img/icons/favicon-32x32.png)
-
+# Quiz Runner - Bruno Soft ![Quiz Runner Logo](client/dist/img/icons/favicon-32x32.png)
 ## Descrição
 
 O Quiz Runner é um projeto que nasceu da ideia original do autor quando tinha 11 anos e foi concretizado dois anos depois. Este projeto é um site de quiz que oferece perguntas desafiadoras em várias categorias, proporcionando uma experiência interativa e divertida para os usuários.
