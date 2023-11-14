@@ -16,7 +16,7 @@ fastify.register(cors, {
 });
 
 const PORT = 1212;
-const API_KEY = "d0hfBe1tC1BmkkmbPXPqW2qd0Tr5WtuzdT8og9UV";
+const API_KEY = "";
 const BASE_URL = "https://quizapi.io/api/v1/questions";
 const CATEGORY = "code";
 const LIMIT = 10;
