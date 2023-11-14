@@ -1,48 +1,56 @@
 /****************************************************
  * Propriedade de BrunoSoft. Todos os direitos reservados.
- * 
+ *
  * O uso não autorizado deste código é estritamente proibido.
  * Qualquer reprodução, modificação ou distribuição sem permissão é uma violação de direitos autorais.
  ****************************************************/
 
-const fastify = require("fastify")({ logger: false });
 const axios = require("axios");
+const fastify = require("fastify")({ logger: false });
 const cors = require("@fastify/cors");
 
 fastify.register(cors, {
-  origin: "*", 
-  methods: ["GET", "PUT", "POST"], 
-  allowedHeaders: ["Content-Type", "Authorization"], 
+  origin: "*",
+  methods: ["GET", "PUT", "POST"],
+  allowedHeaders: ["Content-Type", "Authorization"],
 });
 
 const PORT = 1212;
 const API_KEY = "d0hfBe1tC1BmkkmbPXPqW2qd0Tr5WtuzdT8og9UV";
 const BASE_URL = "https://quizapi.io/api/v1/questions";
-const URL_REQUEST = `${BASE_URL}?apiKey=${API_KEY}&category=code&limit=10`;
+const CATEGORY = "code";
+const LIMIT = 10;
 
-let result = '';
+// Parâmetros da solicitação
+const requestConfig = {
+  params: {
+    API_KEY,
+    CATEGORY,
+    LIMIT,
+  },
+};
+
+let result = "";
 
 const makeRequest = async (url) => {
   try {
-    console.log(url);
-    console.log(URL_REQUEST);
-    const fullURL = new URL(URL_REQUEST, url);
-    console.log(fullURL.toString());
-    const response = axios.get(fullURL.toString());
-    if (response.status === 404) {
-
-    } else {
-      result = response.data;
-      return result;
-    }
+    url = BASE_URL + url;
+    const response = await axios.get(url, requestConfig);
+    console.log(response.data);
+    return response.data;
   } catch (error) {
-    throw Error;
+    console.error(`Erro na solicitação: ${error.message}`);
+    throw error;
   }
 };
 
+fastify.get("/favicon.ico", async (request, reply) => {
+  reply.status(204).send();
+});
+
 fastify.get("/", async (request, reply) => {
   try {
-    const response = await makeRequest('');
+    const response = await makeRequest("");
     return reply.send(response);
   } catch (error) {
     return reply.send(error);
@@ -72,7 +80,9 @@ fastify.get("/:language", async (request, reply) => {
       .send({ error: "Invalid difficulty parameter.", difficulty });
   }
 
-  const queryParams = `&tags=${language}${difficulty ? `&difficulty=${difficulty}` : ""}`;
+  const queryParams = `&tags=${language}${
+    difficulty ? `&difficulty=${difficulty}` : ""
+  }`;
 
   try {
     const response = await makeRequest(queryParams);
