@@ -30,8 +30,6 @@ const requestConfig = {
   },
 };
 
-let result = "";
-
 const makeRequest = async (url) => {
   try {
     url = BASE_URL + url;
